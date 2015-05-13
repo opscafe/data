@@ -1,8 +1,11 @@
 require 'spec_helper'
 
-describe 'replace_cookbook::default' do
+describe 'cafe-data::default' do
   let(:chef_run) { ChefSpec::ServerRunner.new.converge(described_recipe) }
 
-  it 'replace_does_something' do
+  context 'when no attributes are set' do
+    it 'does nothing' do
+      chef_run
+    end
   end
 end
